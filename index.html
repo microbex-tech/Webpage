@@ -1,160 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Microbex Agritech LLP - Coming Soon</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #1f8f3a, #4ac76d, #e9ffe8);
-            background-size: 400% 400%;
-            animation: gradient 10s ease infinite;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            color: #222;
-            text-align: center;
-            padding: 20px;
-        }
-
-        @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        .container {
-            max-width: 700px;
-            background: rgba(255, 255, 255, 0.85);
-            padding: 40px 30px;
-            border-radius: 18px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-            backdrop-filter: blur(5px);
-            padding: 60px 30px 40px;
-        }
-
-        h1 {
-            font-size: 2.6rem;
-            margin-bottom: 15px;
-            color: #1f8f3a;
-        }
-
-        p {
-            font-size: 1.1rem;
-            color: #444;
-            line-height: 1.6;
-        }
-
-        .tagline {
-            margin: 20px 0;
-            font-weight: 600;
-            color: #1f8f3a;
-            font-size: 1.2rem;
-        }
-
-        button {
-            padding: 12px 26px;
-            background: #1f8f3a;
-            border: none;
-            border-radius: 30px;
-            color: white;
-            font-size: 1rem;
-            font-weight: bold;
-            cursor: pointer;
-            margin-top: 20px;
-            transition: all 0.3s ease;
-        }
-
-        button:hover {
-            background: #187631;
-            transform: translateY(-2px);
-        }
-
-        footer {
-            margin-top: 25px;
-            font-size: 0.9rem;
-            color: #555;
-        }
-
-        .top-logo {
-    position: fixed;
-    top: 20px;
-    left: 30px;
-    height: 80px;
-    z-index: 1000;
-}
-
-@media (max-width: 600px) {
-    .top-logo {
-        height: 55px;
-        top: 15px;
-        left: 20px;
-    }
-}
- 
-
- 
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Microbex Agritech LLP</title>
+  <meta
+    name="description"
+    content="Microbex Agritech LLP combines technology, innovation, and food & nutrition to create smarter solutions and better everyday experiences."
+  />
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
 
-    <a href="/">
-    <img src="/assets/images/microbex-logo.png" alt="Microbex Logo" class="top-logo">
-</a>
-    <div class="container">
-        <h1>Something Fresh Is Cooking at Microbex</h1>
-        
-        <p>
-            We’re building a modern platform that blends innovative technology
-            with delicious, healthy snacking solutions.
-        </p>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <img src="assets/images/microbex-logo.png" alt="Microbex Logo" />
+      </a>
 
-        <div class="tagline">Tech-Powered. Taste-Driven.</div>
+      <nav class="main-nav">
+        <a href="about.html">About Us</a>
+        <a href="technology.html">Tech Solutions</a>
+        <a href="food-nutrition.html">Food & Nutrition</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
 
-  <form action="https://formsubmit.co/contact@microbex.in" method="POST" style="margin-top: 20px;">
-
-    <!-- Prevent Spam -->
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_subject" value="New Microbex Website Notification Request">
-    <input type="hidden" name="_template" value="table">
-
-    <input 
-        type="text" 
-        name="name" 
-        placeholder="Your Name" 
-        required
-        style="width: 100%; padding: 12px; margin-bottom: 10px; border-radius: 8px; border: 1px solid #ccc;"
-    >
-
-    <input 
-        type="email" 
-        name="email" 
-        placeholder="Your Email" 
-        required
-        style="width: 100%; padding: 12px; margin-bottom: 10px; border-radius: 8px; border: 1px solid #ccc;"
-    >
-
-    <input 
-        type="text" 
-        name="phone" 
-        placeholder="Phone Number" 
-        required
-        style="width: 100%; padding: 12px; margin-bottom: 10px; border-radius: 8px; border: 1px solid #ccc;"
-    >
-
-    <button 
-        type="submit"
-        style="width: 100%; padding: 14px; background: #1f8f3a; color: white; border: none; border-radius: 30px; font-size: 1rem; cursor: pointer; font-weight: bold;"
-    >
-        Notify Me When It Goes Live
-    </button>
-</form>
-
-        <footer>© Microbex Agritech LLP</footer>
+      <a href="contact.html" class="btn btn-primary header-cta">Get in Touch</a>
     </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <p class="eyebrow">MICROBEX AGRITECH LLP</p>
+        <h1>Building the Future of Food and Technology</h1>
+        <p class="hero-text">
+          Microbex Agritech LLP is creating a new-age platform that combines
+          technology, innovation, and nutrition to deliver smarter solutions
+          and better food experiences.
+        </p>
+        <p class="tagline">Tech-Powered. Taste-Driven.</p>
+
+        <div class="hero-actions">
+          <a href="technology.html" class="btn btn-primary">Explore Tech Solutions</a>
+          <a href="food-nutrition.html" class="btn btn-secondary">Explore Food & Nutrition</a>
+        </div>
+      </div>
+
+      <div class="hero-panel">
+        <div class="hero-card">
+          <h3>One Brand. Two Strong Verticals.</h3>
+          <p>
+            We are building Microbex at the intersection of modern technology
+            and better food solutions — with a strong focus on innovation,
+            quality, and future-ready growth.
+          </p>
+          <ul>
+            <li>Technology-led solutions</li>
+            <li>Food & nutrition innovation</li>
+            <li>Scalable collaboration opportunities</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Snapshot -->
+  <section class="section section-white">
+    <div class="container narrow">
+      <div class="section-heading center">
+        <p class="eyebrow">WHO WE ARE</p>
+        <h2>Built for the Next Generation of Innovation</h2>
+      </div>
+
+      <div class="intro-copy">
+        <p>
+          Microbex Agritech LLP is a forward-thinking company operating at the
+          intersection of technology and food innovation. We are building
+          scalable solutions across digital platforms while developing modern
+          food products designed for today’s evolving lifestyles.
+        </p>
+        <p>
+          Our focus is simple — create value through innovation, quality, and
+          meaningful customer experiences.
+        </p>
+        <a href="about.html" class="text-link">Learn More About Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Verticals -->
+  <section class="section section-tint">
+    <div class="container">
+      <div class="section-heading center">
+        <p class="eyebrow">OUR CORE FOCUS</p>
+        <h2>Two Core Engines. One Vision.</h2>
+        <p class="section-subtext">
+          We are building Microbex across two strong verticals — technology and
+          food — each designed to create impact independently and together.
+        </p>
+      </div>
+
+      <div class="vertical-grid">
+        <article class="feature-card">
+          <span class="feature-label">Tech Solutions</span>
+          <h3>Smart Technology. Practical Impact.</h3>
+          <p>
+            We design and explore technology-led solutions that help businesses
+            improve efficiency, decision-making, and customer engagement.
+          </p>
+          <p>
+            Our focus includes data-driven platforms, digital solutions, and
+            future-ready innovations powered by AI and modern architectures.
+          </p>
+          <a href="technology.html" class="text-link">Explore Tech Solutions</a>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-label">Food & Nutrition</span>
+          <h3>Better Food for Modern Living</h3>
+          <p>
+            We are developing a range of food products focused on taste,
+            quality, and better nutrition.
+          </p>
+          <p>
+            From healthy snacks to ready-to-cook mixes and millet-based
+            offerings, our goal is to make everyday food smarter and more
+            accessible.
+          </p>
+          <a href="food-nutrition.html" class="text-link">Explore Food & Nutrition</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Do -->
+  <section class="section section-white">
+    <div class="container">
+      <div class="section-heading center">
+        <p class="eyebrow">CAPABILITIES</p>
+        <h2>What We Do</h2>
+        <p class="section-subtext">
+          Our capabilities span across technology, food innovation, and business
+          collaboration — all aligned to create meaningful value.
+        </p>
+      </div>
+
+      <div class="card-grid six-grid">
+        <article class="info-card">
+          <h3>Digital & AI Solutions</h3>
+          <p>Building intelligent systems and solutions that enable smarter business outcomes.</p>
+        </article>
+
+        <article class="info-card">
+          <h3>Data & Innovation</h3>
+          <p>Leveraging data, insights, and modern tools to drive efficiency and growth.</p>
+        </article>
+
+        <article class="info-card">
+          <h3>Healthy Snacking</h3>
+          <p>Creating better-for-you snack options designed for taste and convenience.</p>
+        </article>
+
+        <article class="info-card">
+          <h3>Food & Nutrition Products</h3>
+          <p>Developing millet-based, ready-to-cook, and everyday food solutions.</p>
+        </article>
+
+        <article class="info-card">
+          <h3>Gifting Solutions</h3>
+          <p>Curating modern and thoughtful gifting options for individuals and businesses.</p>
+        </article>
+
+        <article class="info-card">
+          <h3>Partnerships & Collaboration</h3>
+          <p>Working with partners, distributors, and innovators to build scalable opportunities.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Microbex -->
+  <section class="section section-tint">
+    <div class="container">
+      <div class="section-heading center">
+        <p class="eyebrow">WHY MICROBEX</p>
+        <h2>Driven by Innovation. Built with Purpose.</h2>
+        <p class="section-subtext">
+          We are building Microbex with a clear purpose — to combine innovation,
+          quality, and trust in everything we do.
+        </p>
+      </div>
+
+      <div class="card-grid four-grid">
+        <article class="info-card">
+          <h3>Innovation-Driven</h3>
+          <p>We focus on new ideas, modern solutions, and continuous improvement.</p>
+        </article>
+
+        <article class="info-card">
+          <h3>Quality First</h3>
+          <p>From technology to food, we prioritize consistency, reliability, and high standards.</p>
+        </article>
+
+        <article class="info-card">
+          <h3>Future-Ready Approach</h3>
+          <p>We build with scalability and adaptability to meet evolving market needs.</p>
+        </article>
+
+        <article class="info-card">
+          <h3>Collaborative Mindset</h3>
+          <p>We believe in growing through partnerships and shared success.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta-section">
+    <div class="container">
+      <div class="cta-box">
+        <div class="cta-content">
+          <p class="eyebrow light">LET’S CONNECT</p>
+          <h2>Let’s Build Something Meaningful Together</h2>
+          <p>
+            Whether you are looking for innovative technology solutions,
+            exploring food partnerships, or seeking collaboration opportunities,
+            Microbex is ready to connect.
+          </p>
+        </div>
+
+        <div class="cta-actions">
+          <a href="contact.html" class="btn btn-light">Get in Touch</a>
+          <a href="about.html" class="btn btn-outline-light">Know More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Preview -->
+  <section class="section section-white">
+    <div class="container contact-preview">
+      <div class="contact-copy">
+        <p class="eyebrow">CONTACT</p>
+        <h2>Connect With Us</h2>
+        <p>
+          We’d love to hear from you — whether you are a customer, partner,
+          collaborator, or someone interested in working with Microbex.
+        </p>
+        <p><strong>Email:</strong> contact@microbex.in</p>
+      </div>
+
+      <form action="https://formsubmit.co/contact@microbex.in" method="POST" class="contact-form">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="New Enquiry from Microbex Website">
+        <input type="hidden" name="_template" value="table">
+
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="text" name="phone" placeholder="Phone Number">
+        <textarea name="message" placeholder="How can we help you?" required></textarea>
+
+        <button type="submit" class="btn btn-primary form-btn">Send Enquiry</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <h3>Microbex Agritech LLP</h3>
+        <p>Tech-Powered. Taste-Driven.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="about.html">About Us</a>
+        <a href="technology.html">Tech Solutions</a>
+        <a href="food-nutrition.html">Food & Nutrition</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 Microbex Agritech LLP. All rights reserved.</p>
+    </div>
+  </footer>
 
 </body>
 </html>
