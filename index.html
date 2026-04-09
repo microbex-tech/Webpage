@@ -33,6 +33,7 @@
             border-radius: 18px;
             box-shadow: 0 8px 20px rgba(0,0,0,0.12);
             backdrop-filter: blur(5px);
+            padding: 60px 30px 40px;
         }
 
         h1 {
@@ -77,10 +78,32 @@
             font-size: 0.9rem;
             color: #555;
         }
+
+        .top-logo {
+    position: fixed;
+    top: 20px;
+    left: 30px;
+    height: 80px;
+    z-index: 1000;
+}
+
+@media (max-width: 600px) {
+    .top-logo {
+        height: 55px;
+        top: 15px;
+        left: 20px;
+    }
+}
+ 
+
+ 
     </style>
 </head>
 <body>
 
+    <a href="/">
+    <img src="/assets/images/microbex-logo.png" alt="Microbex Logo" class="top-logo">
+</a>
     <div class="container">
         <h1>Something Fresh Is Cooking at Microbex</h1>
         
