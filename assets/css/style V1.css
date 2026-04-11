@@ -1,4 +1,4 @@
-﻿/* Base Reset */
+/* Base Reset */
 * {
   margin: 0;
   padding: 0;
@@ -10,12 +10,10 @@
   --brand-green: #074328;
   --brand-green-2: #2f8f45;
   --brand-green-soft: #eef6ef;
-  --brand-cream: #ffffff;
-  --brand-yellow: #d8b64b;
-  --brand-yellow-soft: #f6edc8;
+  --brand-cream: #f4efe6;
   --brand-green-border: #d9e9dc;
   --text-dark: #1f2a24;
-  --text-muted: #4b5563;
+  --text-muted: #5c5c5c;
   --white: #ffffff;
   --off-white: #fafaf7;
   --shadow-soft: 0 12px 30px rgba(7, 67, 40, 0.08);
@@ -63,12 +61,12 @@ a {
   background: var(--white);
 }
 
-.section-cream {
-  background: var(--white);
+.section-tint {
+  background: var(--brand-green-soft);
 }
 
-.section-tint {
-  background: var(--white);
+.section-cream {
+  background: var(--brand-cream);
 }
 
 .center {
@@ -108,24 +106,10 @@ a {
   margin-top: 16px;
   font-weight: 600;
   color: var(--brand-green);
-  position: relative;
 }
 
-.text-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 100%;
-  height: 2px;
-  background: var(--brand-yellow);
-  transform: scaleX(0.4);
-  transform-origin: left;
-  transition: transform 0.25s ease;
-}
-
-.text-link:hover::after {
-  transform: scaleX(1);
+.text-link:hover {
+  text-decoration: underline;
 }
 
 /* Buttons */
@@ -160,8 +144,7 @@ a {
 }
 
 .btn-secondary:hover {
-  background: var(--brand-yellow-soft);
-  border-color: var(--brand-yellow);
+  background: var(--brand-green-soft);
 }
 
 .btn-light {
@@ -195,15 +178,15 @@ a {
 }
 
 .header-inner {
-  min-height: 96px;
+  min-height: 82px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
+  gap: 24px;
 }
 
 .logo img {
-  height: 60px;
+  height: 68px;
   width: auto;
 }
 
@@ -211,35 +194,16 @@ a {
   display: flex;
   align-items: center;
   gap: 28px;
-  margin-left: 20px;
 }
 
 .main-nav a {
   font-size: 0.96rem;
   font-weight: 500;
   color: var(--text-dark);
-  position: relative;
-}
-
-.main-nav a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -8px;
-  width: 100%;
-  height: 2px;
-  background: var(--brand-yellow);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.25s ease;
 }
 
 .main-nav a:hover {
   color: var(--brand-green);
-}
-
-.main-nav a:hover::after {
-  transform: scaleX(1);
 }
 
 .header-cta {
@@ -248,7 +212,8 @@ a {
 
 /* Hero */
 .hero {
-  background: var(--white);
+  background: linear-gradient(180deg, #ffffff 0%, var(--brand-cream) 100%);
+  padding: 72px 0 80px;
 }
 
 .hero-grid {
@@ -294,8 +259,8 @@ a {
 
 .hero-card {
   background: var(--brand-cream);
-  border: 2px solid var(--brand-yellow);
-  border-radius: 0;
+  border: 1px solid var(--brand-green-border);
+  border-radius: var(--radius-lg);
   box-shadow: var(--shadow-soft);
   padding: 32px;
   max-width: 420px;
@@ -321,16 +286,6 @@ a {
   margin-top: 8px;
 }
 
-/* Accent system */
-.accent-card {
-  position: relative;
-  overflow: hidden;
-}
-
-.accent-card::before {
-  content: none;
-}
-
 /* Intro */
 .intro-copy {
   text-align: center;
@@ -351,11 +306,11 @@ a {
 }
 
 .feature-card {
-  background: var(--brand-cream);
+  background: var(--white);
   padding: 34px;
-  border-radius: 0;
+  border-radius: var(--radius-lg);
   box-shadow: var(--shadow-soft);
-  border: 2px solid var(--brand-yellow);
+  border: 1px solid rgba(7, 67, 40, 0.06);
 }
 
 .feature-label {
@@ -363,7 +318,7 @@ a {
   margin-bottom: 16px;
   padding: 6px 12px;
   border-radius: 999px;
-  background: var(--brand-yellow-soft);
+  background: var(--brand-green-soft);
   color: var(--brand-green);
   font-size: 0.82rem;
   font-weight: 700;
@@ -397,9 +352,9 @@ a {
 }
 
 .info-card {
-  background: var(--brand-cream);
-  border: 2px solid var(--brand-yellow);
-  border-radius: 0;
+  background: var(--white);
+  border: 1px solid rgba(7, 67, 40, 0.06);
+  border-radius: var(--radius-md);
   padding: 28px;
   box-shadow: var(--shadow-light);
 }
@@ -498,8 +453,7 @@ a {
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
-  border-color: var(--brand-yellow);
-  box-shadow: 0 0 0 3px rgba(216, 182, 75, 0.14);
+  border-color: var(--brand-green-2);
 }
 
 .form-btn {
@@ -593,7 +547,7 @@ a {
   }
 
   .logo img {
-    height: 68px;
+    height: 58px;
   }
 
   .hero-card,
