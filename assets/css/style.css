@@ -215,7 +215,7 @@ a {
 }
 
 .main-nav a {
-  font-size: 0.96rem;
+  font-size: 1.05rem;
   font-weight: 500;
   color: var(--text-dark);
   position: relative;
@@ -296,7 +296,7 @@ a {
 
 .hero-content h1 {
   max-width: 520px;
-  font-size: clamp(2.2rem, 3.8vw, 3.4rem);
+  font-size: clamp(2.0rem, 3.2vw, 3.0rem);
   line-height: 1.12;
   letter-spacing: -0.02em;
   color: #ffffff;
@@ -305,14 +305,34 @@ a {
   text-shadow: 0 3px 14px rgba(0, 0, 0, 0.22);
 }
 
+
+
 .hero-tagline {
-  max-width: 520px;
-  font-size: 1.02rem;
+  font-size: 1.05rem;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.92);
-  text-align: left;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
+  color: #ffffff;
+  display: inline-block;
+  padding-bottom: 1px;
+  border-bottom: 3px solid rgba(255, 196, 3, 0.9);
 }
+/*
+.hero-tagline {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(6px);
+
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+}
+  */
 
 .hero-bottom {
   background: var(--white);
