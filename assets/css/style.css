@@ -734,7 +734,7 @@ a {
 
   .hero-tagline {
     max-width: 220px;
-    font-size: 0.82rem;
+    font-size: 0.8rem;
     line-height: 1.35;
     text-align: right;
     color: rgba(255, 255, 255, 0.92);
@@ -791,6 +791,6 @@ a {
 
   .hero-tagline {
     max-width: 200px;
-    font-size: 0.70rem;
+    font-size: 0.61rem;
   }
 }
