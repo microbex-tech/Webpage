@@ -30,6 +30,20 @@
 
     <a href="contact.html" class="btn btn-primary header-cta">Get in Touch</a>
 
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="about.html">About Us</a>
+    <a href="food-nutrition.html">Food &amp; Nutrition</a>
+    <a href="technology.html">Tech Solutions</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="contact.html" class="mobile-menu-cta">Get in Touch</a>
   </div>
 </header>
 
@@ -272,6 +286,19 @@
     <p>&copy; 2026 Microbex Agritech LLP. All rights reserved.</p>
   </div>
 </footer>
+
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const mobileMenu = document.querySelector('.mobile-menu');
+
+  menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('is-open');
+    mobileMenu.classList.toggle('is-open');
+
+    const expanded = menuToggle.classList.contains('is-open');
+    menuToggle.setAttribute('aria-expanded', expanded);
+  });
+</script>
 
 </body>
 </html>

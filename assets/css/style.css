@@ -202,6 +202,10 @@ a {
   gap: 16px;
 }
 
+.menu-toggle {
+  display: none;
+}
+
 .logo img {
   height: 60px;
   width: auto;
@@ -215,23 +219,31 @@ a {
 }
 
 .main-nav a {
-  font-size: 1.05rem;
+ font-size: 0.96rem;
   font-weight: 500;
   color: var(--text-dark);
   position: relative;
+  padding-bottom: 6px; /* add this */
+  text-decoration: none; /* optional safety */
 }
 
 .main-nav a::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -8px;
-  width: 100%;
+  bottom: 0;
+
+  width: 0%;
   height: 2px;
-  background: var(--brand-yellow);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.25s ease;
+
+  background-color: #D8B64B;
+  border-radius: 2px;
+
+  transition: width 0.3s ease;
+}
+
+.main-nav a:hover::after {
+  width: 100%;
 }
 
 .main-nav a:hover {
@@ -592,6 +604,81 @@ a {
   font-size: 0.94rem;
 }
 
+/* Mobile menu toggle button */
+.menu-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--brand-green);
+  border-radius: 2px;
+  transition: all 0.25s ease;
+}
+
+/* Mobile dropdown */
+.mobile-menu {
+  display: none;
+  background: var(--white);
+  border-top: 1px solid rgba(7, 67, 40, 0.08);
+  border-bottom: 1px solid rgba(7, 67, 40, 0.08);
+  box-shadow: 0 12px 24px rgba(7, 67, 40, 0.08);
+  padding: 8px 24px 20px;
+}
+
+.mobile-menu a {
+  display: block;
+  padding: 14px 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  border-bottom: 1px solid rgba(7, 67, 40, 0.08);
+}
+
+.mobile-menu a:last-child {
+  border-bottom: none;
+}
+
+.mobile-menu-cta {
+  margin-top: 12px;
+  text-align: center;
+  background: var(--brand-green);
+  color: var(--white) !important;
+  border-radius: 10px;
+  padding: 12px 16px !important;
+  border-bottom: none !important;
+}
+
+/* Active state */
+.mobile-menu.is-open {
+  display: block;
+}
+
+/* Animated hamburger to X */
+.menu-toggle.is-open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle.is-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.is-open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
 /* Responsive */
 @media (max-width: 1080px) {
   .contact-preview,
@@ -620,10 +707,14 @@ a {
   }
 }
 
-@media (max-width: 860px) {
+@media (max-width: 900px) {
   .main-nav,
   .header-cta {
     display: none;
+  }
+
+   .menu-toggle {
+    display: inline-flex;
   }
 
   .section {
@@ -635,33 +726,37 @@ a {
     width: auto;
   }
 
-  .hero-image {
-    min-height: 440px;
-    background-position: 35% center;
-  }
+.hero-image {
+  min-height: 440px;
+  background-position: 40% center;
+  align-items: flex-end;
+}
 
   .header-inner {
     min-height: 74px;
   }
 
-  .hero-content-inner {
-    width: min(100% - 32px, var(--max-width));
-    min-height: 440px;
-    align-items: flex-start;
-    justify-content: center;
-    padding-right: 0;
-  }
+ .hero-content-inner {
+  width: min(100% - 32px, var(--max-width));
+  min-height: 440px;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding-right: 8px;
+  padding-bottom: 28px;
+}
 
-  .hero-content h1 {
-    max-width: 420px;
-    font-size: clamp(2rem, 6vw, 2.8rem);
-    margin-bottom: 10px;
-  }
+.hero-content h1 {
+  max-width: 320px;
+  font-size: clamp(2rem, 4.8vw, 2.6rem);
+  margin-bottom: 10px;
+  text-align: right;
+}
 
-  .hero-tagline {
-    max-width: 340px;
-    font-size: 0.98rem;
-  }
+.hero-tagline {
+  max-width: 320px;
+  font-size: 0.88rem;
+  text-align: right;
+}
 
   .hero-bottom {
     padding: 28px 0 52px;
@@ -724,7 +819,7 @@ a {
 
   .hero-content h1 {
     max-width: 220px;
-    font-size: 2.25rem;
+    font-size: 1.6rem;
     line-height: 1.05;
     margin-bottom: 10px;
     text-align: right;
@@ -734,7 +829,7 @@ a {
 
   .hero-tagline {
     max-width: 220px;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     line-height: 1.35;
     text-align: right;
     color: rgba(255, 255, 255, 0.92);
@@ -786,7 +881,7 @@ a {
 
   .hero-content h1 {
     max-width: 200px;
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 
   .hero-tagline {
@@ -794,3 +889,4 @@ a {
     font-size: 0.61rem;
   }
 }
+
