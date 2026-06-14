@@ -270,12 +270,24 @@ a {
   position: relative;
   width: 100%;
   min-height: 560px;
-  background: url('../images/hero-microbex.png') no-repeat center center / cover;
   display: flex;
   align-items: center;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
 }
 
 .hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
   background:
     linear-gradient(
       90deg,
@@ -297,13 +309,13 @@ a {
 
 .hero-content-inner {
   width: min(var(--max-width), calc(100% - 40px));
-  margin: 0 auto;
+  margin: 0 auto 0 0;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: center;
   min-height: 560px;
-  padding-right: 36px;
+  padding-left: 60px;
 }
 
 .hero-content h1 {
