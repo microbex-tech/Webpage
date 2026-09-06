@@ -198,7 +198,7 @@ a {
   min-height: 96px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 16px;
   width: calc(100% - 80px);
   max-width: none;
@@ -216,12 +216,12 @@ a {
 .main-nav {
   display: flex;
   align-items: center;
-  gap: 28px;
-  margin-left: 20px;
+  gap: 42px;
+  margin-left: 56px;
 }
 
 .main-nav a {
- font-size: 0.96rem;
+ font-size: 1.06rem;
   font-weight: 500;
   color: var(--text-dark);
   position: relative;
@@ -258,6 +258,7 @@ a {
 
 .header-cta {
   white-space: nowrap;
+  margin-left: auto;
 }
 
 /* Hero */
@@ -271,7 +272,9 @@ a {
 .hero-image {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  height: calc(100svh - 96px);
+  min-height: 560px;
+  max-height: 900px;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -283,7 +286,7 @@ a {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
   z-index: 0;
 }
@@ -343,6 +346,40 @@ a {
   display: inline-block;
   padding-bottom: 1px;
   border-bottom: 3px solid rgba(255, 196, 3, 0.9);
+}
+
+.hero-dots {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  bottom: 22px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  transform: translateX(-50%);
+}
+
+.hero-dot {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: width 0.25s ease, background 0.25s ease;
+}
+
+.hero-dot.is-active {
+  width: 28px;
+  background: var(--brand-yellow);
+  border-color: var(--brand-yellow);
+}
+
+.hero-dot:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.9);
+  outline-offset: 3px;
 }
 /*
 .hero-tagline {
@@ -728,6 +765,7 @@ a {
 
    .menu-toggle {
     display: inline-flex;
+    margin-left: auto;
   }
 
   .section {
@@ -744,6 +782,10 @@ a {
   }
 
 .hero-image {
+  height: auto;
+  min-height: 0;
+  max-height: none;
+  aspect-ratio: 16 / 9;
   align-items: flex-end;
 }
 
@@ -816,6 +858,20 @@ a {
 
 .hero-image {
     align-items: flex-end;
+  }
+
+  .hero-dots {
+    bottom: 10px;
+    gap: 7px;
+  }
+
+  .hero-dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  .hero-dot.is-active {
+    width: 22px;
   }
 
   .hero-overlay {
