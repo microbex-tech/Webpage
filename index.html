@@ -50,7 +50,7 @@
 <!-- Hero -->
 <section class="hero">
   <div class="hero-image">
-    <video class="hero-video" autoplay muted loop playsinline>
+    <video class="hero-video" autoplay muted playsinline preload="auto">
       <source src="assets/videos/hero video.mp4" type="video/mp4">
     </video>
     <div class="hero-overlay"></div>
@@ -70,6 +70,8 @@
 
       </div>
     </div>
+
+    <div class="hero-dots" aria-label="Choose hero video"></div>
   </div>
 </section>
 
@@ -300,6 +302,53 @@
 
     const expanded = menuToggle.classList.contains('is-open');
     menuToggle.setAttribute('aria-expanded', expanded);
+  });
+
+  const heroVideo = document.querySelector('.hero-video');
+  const heroPlaylist = [
+    'assets/videos/hero video.mp4',
+    'assets/videos/Packing products.mp4',
+    'assets/videos/data Analytics.mp4',
+    'assets/videos/delivery trucks.mp4',
+  ];
+  const heroDots = document.querySelector('.hero-dots');
+  let currentHeroVideo = 0;
+
+  const updateHeroDots = () => {
+    heroDots.querySelectorAll('.hero-dot').forEach((dot, index) => {
+      const isActive = index === currentHeroVideo;
+      dot.classList.toggle('is-active', isActive);
+      if (isActive) {
+        dot.setAttribute('aria-current', 'true');
+      } else {
+        dot.removeAttribute('aria-current');
+      }
+    });
+  };
+
+  const playHeroVideo = (index) => {
+    currentHeroVideo = index;
+    heroVideo.src = heroPlaylist[index];
+    heroVideo.load();
+    updateHeroDots();
+    heroVideo.play().catch(() => {
+      // The browser may pause autoplay when battery or data-saving mode is active.
+    });
+  };
+
+  heroPlaylist.forEach((video, index) => {
+    const dot = document.createElement('button');
+    dot.type = 'button';
+    dot.className = 'hero-dot';
+    dot.setAttribute('aria-label', `Play hero video ${index + 1}`);
+    dot.addEventListener('click', () => playHeroVideo(index));
+    heroDots.appendChild(dot);
+  });
+
+  updateHeroDots();
+
+  heroVideo.addEventListener('ended', () => {
+    playHeroVideo((currentHeroVideo + 1) % heroPlaylist.length);
   });
 </script>
 
