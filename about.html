@@ -4,56 +4,109 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us | Microbex</title>
-  <meta name="description" content="Microbex is currently preparing the About Us page. Please check back soon." />
+  <meta name="description" content="Microbex is a Food & Technology company driven by a simple belief: better food should be accessible to everyone." />
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="icon" type="image/png" href="assets/images/microbex%20-%20only%20Logo.png" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo" aria-label="Microbex Home">
-        <img src="assets/images/microbex-logo.png" alt="Microbex Logo" />
-      </a>
-      <nav class="main-nav" aria-label="Primary Navigation">
-        <a href="about.html">About Us</a>
-        <a href="food-nutrition.html">Food &amp; Nutrition</a>
-        <a href="technology.html">Tech Solutions</a>
-        <a href="contact.html">Contact Us</a>
-      </nav>
-      <a href="contact.html" class="btn btn-primary header-cta">Get in Touch</a>
-    </div>
-  </header>
 
-  <section class="hero">
-    <div class="container narrow">
-      <div class="section-heading center">
-        <p class="eyebrow">ABOUT US</p>
-        <h1>We&rsquo;re Working On This Page</h1>
-      </div>
-      <div class="intro-copy">
-        <p>We&rsquo;re currently preparing more information about Microbex, our journey, and what we&rsquo;re building.</p>
-        <p>Please check back soon, or reach out if you&rsquo;d like to connect with us directly.</p>
-        <a href="contact.html" class="btn btn-primary">Contact Microbex</a>
-      </div>
-    </div>
-  </section>
+<!-- Header -->
+<header class="site-header">
+  <div class="container header-inner">
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>
-        <h3>Microbex</h3>
-        <p>Tech-Powered. Taste-Driven.</p>
-      </div>
-      <div class="footer-links">
-        <a href="about.html">About Us</a>
-        <a href="food-nutrition.html">Food &amp; Nutrition</a>
-        <a href="technology.html">Tech Solutions</a>
-        <a href="contact.html">Contact Us</a>
-      </div>
+    <a href="index.html" class="logo" aria-label="Microbex Home">
+      <img src="assets/images/microbex-logo.png" alt="Microbex Logo" />
+    </a>
+
+    <nav class="main-nav" aria-label="Primary Navigation">
+      <a href="about.html">About Us</a>
+      <a href="food-nutrition.html">Food &amp; Nutrition</a>
+      <a href="technology.html">Tech Solutions</a>
+    </nav>
+
+    <a href="contact.html" class="header-cta">Contact Us</a>
+
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="about.html">About Us</a>
+    <a href="food-nutrition.html">Food &amp; Nutrition</a>
+    <a href="technology.html">Tech Solutions</a>
+    <a href="contact.html" class="mobile-menu-cta">Contact Us</a>
+  </div>
+</header>
+
+<!-- About -->
+<section class="section section-white">
+  <div class="container">
+
+    <div class="about-heading">
+      <h1>About Us</h1>
     </div>
-    <div class="container footer-bottom">
-      <p>&copy; 2026 Microbex Agritech LLP. All rights reserved.</p>
+
+    <div class="about-grid">
+
+      <div class="about-copy">
+        <p>Microbex is a Food &amp; Technology company driven by a simple belief: better food should be accessible to everyone.</p>
+
+        <p>We believe that making better food accessible takes more than developing good products. It requires understanding what people need, sourcing the right ingredients, building efficient supply chains, and ensuring the right products reach the right people.</p>
+
+        <p>Through our Food &amp; Nutrition division, we develop food products guided by nutritional value, taste, and convenience. We draw inspiration from traditional grains and ingredients to create products suited to modern lifestyles.</p>
+
+        <p>Through our Technology Solutions division, we build and apply technology to help food and agriculture businesses improve efficiency, reduce waste, understand customer needs, and make better decisions.</p>
+
+        <p>At Microbex, food and technology are two parts of the same vision: transforming the food ecosystem to make better food more accessible, one meaningful step at a time.</p>
+      </div>
+
+      <div class="about-media">
+        <img src="assets/images/Tech solutions hero image.png" alt="Agricultural field overlaid with technology icons, representing Microbex's food and technology vision" />
+      </div>
+
     </div>
-  </footer>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+
+    <div>
+      <h3>Microbex</h3>
+      <p>FOOD. TECHNOLOGY. BETTER LIVING.</p>
+    </div>
+
+    <div class="footer-links">
+      <a href="about.html">About Us</a>
+      <a href="food-nutrition.html">Food &amp; Nutrition</a>
+      <a href="technology.html">Tech Solutions</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+
+  </div>
+
+  <div class="container footer-bottom">
+    <p>&copy; 2026 Microbex Agritech LLP. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const mobileMenu = document.querySelector('.mobile-menu');
+
+  menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('is-open');
+    mobileMenu.classList.toggle('is-open');
+
+    const expanded = menuToggle.classList.contains('is-open');
+    menuToggle.setAttribute('aria-expanded', expanded);
+  });
+</script>
+
 </body>
 </html>

@@ -4,56 +4,122 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us | Microbex</title>
-  <meta name="description" content="Microbex is currently preparing the Contact page. Please check back soon." />
+  <meta name="description" content="Get in touch with Microbex — reach out about partnerships, our products, or technology solutions." />
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="icon" type="image/png" href="assets/images/microbex%20-%20only%20Logo.png" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo" aria-label="Microbex Home">
-        <img src="assets/images/microbex-logo.png" alt="Microbex Logo" />
-      </a>
-      <nav class="main-nav" aria-label="Primary Navigation">
-        <a href="about.html">About Us</a>
-        <a href="food-nutrition.html">Food &amp; Nutrition</a>
-        <a href="technology.html">Tech Solutions</a>
-        <a href="contact.html">Contact Us</a>
-      </nav>
-      <a href="contact.html" class="btn btn-primary header-cta">Get in Touch</a>
-    </div>
-  </header>
 
-  <section class="hero">
-    <div class="container narrow">
-      <div class="section-heading center">
-        <p class="eyebrow">CONTACT US</p>
-        <h1>We&rsquo;re Updating This Page</h1>
-      </div>
-      <div class="intro-copy">
-        <p>We&rsquo;re currently preparing a dedicated contact page with more details and options to reach us.</p>
-        <p>Until then, you can use the contact form on the homepage or email us at <strong>contact@microbex.in</strong>.</p>
-        <a href="index.html" class="btn btn-primary">Go To Homepage</a>
-      </div>
-    </div>
-  </section>
+<!-- Header -->
+<header class="site-header">
+  <div class="container header-inner">
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>
-        <h3>Microbex</h3>
-        <p>Tech-Powered. Taste-Driven.</p>
-      </div>
-      <div class="footer-links">
-        <a href="about.html">About Us</a>
-        <a href="food-nutrition.html">Food &amp; Nutrition</a>
-        <a href="technology.html">Tech Solutions</a>
-        <a href="contact.html">Contact Us</a>
-      </div>
+    <a href="index.html" class="logo" aria-label="Microbex Home">
+      <img src="assets/images/microbex-logo.png" alt="Microbex Logo" />
+    </a>
+
+    <nav class="main-nav" aria-label="Primary Navigation">
+      <a href="about.html">About Us</a>
+      <a href="food-nutrition.html">Food &amp; Nutrition</a>
+      <a href="technology.html">Tech Solutions</a>
+    </nav>
+
+    <a href="contact.html" class="header-cta">Contact Us</a>
+
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="about.html">About Us</a>
+    <a href="food-nutrition.html">Food &amp; Nutrition</a>
+    <a href="technology.html">Tech Solutions</a>
+    <a href="contact.html" class="mobile-menu-cta">Contact Us</a>
+  </div>
+</header>
+
+<!-- Page Heading -->
+<section class="section section-white">
+  <div class="container narrow">
+    <div class="section-heading center">
+      <p class="eyebrow">CONTACT US</p>
+      <h2>Let&rsquo;s Start A Conversation</h2>
     </div>
-    <div class="container footer-bottom">
-      <p>&copy; 2026 Microbex Agritech LLP. All rights reserved.</p>
+    <div class="intro-copy">
+      <p>Whether you&rsquo;re curious about our food products, interested in our technology solutions, or exploring a partnership, we&rsquo;d love to hear from you.</p>
     </div>
-  </footer>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="section section-white">
+  <div class="container contact-preview">
+
+    <div class="contact-copy">
+      <p class="eyebrow">GET IN TOUCH</p>
+      <h2>We&rsquo;d Love To Hear From You</h2>
+
+      <p>
+        Reach out with questions, feedback, or collaboration ideas &mdash; our team typically responds within one to two business days.
+      </p>
+
+      <p><strong>Email:</strong> contact@microbex.in</p>
+      <p><strong>Phone:</strong> +91 7904758033</p>
+    </div>
+
+    <form action="https://formsubmit.co/contact@microbex.in" method="POST" class="contact-form">
+
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_subject" value="Microbex Website Enquiry">
+
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+
+      <button type="submit" class="btn btn-primary form-btn">Send Message</button>
+
+    </form>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+
+    <div>
+      <h3>Microbex</h3>
+      <p>FOOD. TECHNOLOGY. BETTER LIVING.</p>
+    </div>
+
+    <div class="footer-links">
+      <a href="about.html">About Us</a>
+      <a href="food-nutrition.html">Food &amp; Nutrition</a>
+      <a href="technology.html">Tech Solutions</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+
+  </div>
+
+  <div class="container footer-bottom">
+    <p>&copy; 2026 Microbex Agritech LLP. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const mobileMenu = document.querySelector('.mobile-menu');
+
+  menuToggle.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('is-open');
+    menuToggle.classList.toggle('is-open', isOpen);
+    menuToggle.setAttribute('aria-expanded', isOpen);
+  });
+</script>
+
 </body>
 </html>
